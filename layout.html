@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Layout exercises</title>
+</head>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+     * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+     }
+
+     body {
+          font-family: 'Inter', sans-serif;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+     }
+
+     /* Layout 1 */
+     .layout1 {
+          display: flex;
+          flex-direction: column;
+          background-color: #f7c9ac;
+          border: 1px solid black;
+          width: 50vw;
+     }
+
+     .layout1>* {
+          padding: .7vw;
+     }
+
+     .layout1>*:not(:nth-child(even)) {
+          text-align: center;
+     }
+
+     .layout1>*:not(:last-child) {
+          border-bottom: 1px solid black;
+     }
+
+     .layout1 section {
+          height: 30vh;
+     }
+
+     /* Layout 2 */
+     .layout2 {
+          background-color: #e1eed9;
+          border: 1px solid black;
+          width: 50vw;
+     }
+
+     .layout2>*:not(:last-child) {
+          border-bottom: 1px solid black;
+     }
+
+     .layout2>* {
+          padding: .7vw;
+     }
+
+     .layout2>*:not(:nth-child(even)) {
+          text-align: center;
+     }
+
+     .layout2 .splitSection {
+          display: grid;
+          grid-template-columns: 10vw 20vw auto;
+          height: 30vh;
+          padding: 0;
+          margin: 0;
+     }
+
+     .layout2 .splitSection>* {
+          padding: .7vw;
+     }
+
+     .layout2 .splitSection>*:not(:last-child) {
+          border-right: 1px solid black;
+     }
+
+     /* Layout 3 */
+     .layout3 {
+          background-color: #ffe499;
+          border: 1px solid black;
+          padding: 0;
+          margin: 0;
+          width: 50vw;
+     }
+
+     .layout3>*:not(:last-child) {
+          border-bottom: 1px solid black;
+     }
+
+     .layout3 menu {
+          margin: 0;
+     }
+
+     .layout3>*:not(:nth-child(3)) {
+          text-align: center;
+     }
+
+     .layout3>* {
+          padding: .7vw;
+     }
+
+     .layout3 .splitSection {
+          display: grid;
+          grid-template-columns: 10vw 20vw auto;
+          height: 30vh;
+          padding: 0;
+          margin: 0;
+     }
+
+     .layout3 .splitSection>* {
+          padding: .7vw;
+     }
+
+     .layout3 .splitSection>*:not(:last-child) {
+          border-right: 1px solid black;
+     }
+
+     /* Layout 4 */
+     .layout4 {
+          background-color: #8eaadb;
+          border: 1px solid black;
+          width: 50vw;
+     }
+
+     .layout4>*:not(:last-child) {
+          border-bottom: 1px solid black;
+     }
+
+     .layout4>* {
+          padding: .7vw;
+     }
+
+     .layout4 .splitSection {
+          display: grid;
+          grid-template-columns: 10vw 20vw auto;
+          height: 30vh;
+          padding: 0;
+          margin: 0;
+     }
+
+     .layout4 .splitSection>* {
+          padding: .7vw;
+     }
+
+     .layout4 .splitSection>*:not(:last-child) {
+          border-right: 1px solid black;
+     }
+
+     .layout4 .splitSection article {
+          background-color: #fae3d4;
+          border: 1px solid black;
+          width: 38vw;
+          height: 23vh;
+          margin-top: .5vh;
+          padding: .3vw;
+     }
+
+     /* Layout 5 */
+     .layout5 {
+          background-color: #a8d08d;
+          border: 1px solid black;
+          width: 50vw;
+     }
+
+     .layout5>*:not(:last-child) {
+          border-bottom: 1px solid black;
+     }
+
+     .layout5>* {
+          padding: .7vw;
+     }
+
+     .layout5 .splitSection {
+          display: flex;
+          flex-direction: column;
+          height: 30vh;
+          padding: 0;
+          margin: 0;
+     }
+
+     .layout5 .splitSection>* {
+          padding: .7vw;
+     }
+
+     .layout5 .splitSection>*:not(:last-child) {
+          border-bottom: 1px solid black;
+     }
+
+     .layout5 .splitSection article {
+          background-color: #fae3d4;
+          border: 1px solid black;
+          width: 48.3vw;
+          height: 17vh;
+          margin-top: .5vh;
+          padding: .3vw;
+     }
+
+     /* Layout 6 */
+     .layout6 {
+          background-color: #ffe499;
+          border: 1px solid black;
+          width: 50vw;
+     }
+
+     .layout6>*:not(:last-child) {
+          border-bottom: 1px solid black;
+     }
+
+     .layout6>* {
+          padding: .7vw;
+     }
+
+     .layout6 .splitSection {
+          display: grid;
+          grid-template-columns: 30vw auto;
+          height: 30vh;
+          padding: 0;
+          margin: 0;
+     }
+
+     .layout6 .splitSection>* {
+          padding: .7vw;
+     }
+
+     .layout6 .splitSection>*:not(:last-child) {
+          border-right: 1px solid black;
+     }
+
+     .layout6 .splitSection article {
+          background-color: #fae3d4;
+          border: 1px solid black;
+          width: 28.4vw;
+          height: 10vh;
+          margin-top: 1vh;
+          padding: .3vw;
+     }
+
+     .footer,
+     .header {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #a8d08d;
+          text-align: center;
+          padding: 1vw;
+          width: 100%;
+          height: 8vh;
+     }
+
+     .header {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 2vw;
+     }
+     .footer {
+          margin-top: 1vw;
+     }
+     h1 {
+          text-transform: uppercase;
+          padding: 1vw;
+     }
+</style>
+
+<body>
+     <div class="header">
+          <span>
+               Bài tập layout trang web sử dụng HTML/CSS
+          </span>
+     </div>
+     <h1>Layout 1</h1>
+     <div class="layout1">
+          <header>
+               header
+          </header>
+          <section>
+               section
+          </section>
+          <footer>
+               footer
+          </footer>
+     </div>
+     <h1>Layout 2</h1>
+     <div class="layout2">
+          <header>
+               header
+          </header>
+          <section class="splitSection">
+               <section>
+                    nav
+               </section>
+               <section>
+               </section>
+               <section>
+                    section
+               </section>
+          </section>
+          <footer>
+               footer
+          </footer>
+     </div>
+     <h1>Layout 3</h1>
+     <div class="layout3">
+          <header>
+               header
+          </header>
+          <menu>
+               menu
+          </menu>
+          <section class="splitSection">
+               <section>
+                    nav
+               </section>
+               <section>
+               </section>
+               <section>
+                    section
+               </section>
+          </section>
+          <footer>
+               footer
+          </footer>
+     </div>
+     <h1>Layout 4</h1>
+     <div class="layout4">
+          <header>
+               header
+          </header>
+          <section class="splitSection">
+               <section>
+                    nav
+               </section>
+               <section>
+                    section
+                    <article>
+                         article
+                    </article>
+               </section>
+          </section>
+          <footer>
+               footer
+          </footer>
+     </div>
+     <h1>Layout 5</h1>
+     <div class="layout5">
+          <header>
+               header
+          </header>
+          <section class="splitSection">
+               <section>
+                    nav
+               </section>
+               <section>
+                    section
+                    <article>
+                         article
+                    </article>
+               </section>
+          </section>
+          <footer>
+               footer
+          </footer>
+     </div>
+     <h1>Layout 6</h1>
+     <div class="layout6">
+          <header>
+               header
+          </header>
+          <section>
+               nav
+          </section>
+          <section class="splitSection">
+               <section>
+                    section
+                    <article>
+                         article
+                    </article>
+                    <article>
+                         article
+                    </article>
+               </section>
+               <aside>
+                    aside
+               </aside>
+          </section>
+          <footer>
+               footer
+          </footer>
+     </div>
+     <hr>
+     <div class="footer">
+          <span>
+               <b>Tên sinh viên:</b> Trần Thái Tính. <br>
+               <b>Mã số sinh viên:</b> 22695261.
+          </span>
+     </div>
+</body>
+
+</html>

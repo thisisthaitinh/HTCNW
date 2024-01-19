@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<style>
+     * {
+          box-sizing: border-box;
+     }
+     td {
+          display: table;
+     }
+
+     table {
+          border: 2px solid grey;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: fit-content;
+     }
+</style>
+
+<body>
+     <table>
+          <tr>
+               <td><label for="name">Name:</label></td>
+               <td><input type="text" name="name"></td>
+          </tr>
+          <tr>
+               <td><label for="number">Telephone Number:</label></td>
+               <td><input type="text" name="number"></td>
+          </tr>
+          <tr>
+               <td><label for="email">Email:</label></td>
+               <td><input type="text" name="email"></td>
+          </tr>
+          <tr>
+               <td><label for="favcolor">Favorite color:</label></td>
+               <td><input type="color" name="favcolor" value="#0000ff"></td>
+          </tr>
+          <tr>
+               <td><label for="dob">Date of birth:</label></td>
+               <td><input type="date" name="dob" value="2015-07-16"></td>
+          </tr>
+          <tr>
+               <td>
+                    <button>Submit</button>
+               </td>
+     </table>
+</body>
+
+</html>

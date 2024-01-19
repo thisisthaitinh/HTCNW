@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<style>
+     * {
+          box-sizing: border-box;
+     }
+     fieldset>* {
+          padding: 10px;
+     }
+
+     .lbl {
+          text-align: left;
+          width: 80px;
+          white-space: nowrap;
+          /* border: 1px solid black; */
+     }
+
+     .fld {
+          width: 100%;
+     }
+
+     .frm {
+          display: inline-block;
+     }
+     /* td textarea:not([type="checkbox"]){
+          width: 300px;
+     } */
+</style>
+
+<body>
+     <h1>Contact Us</h1>
+     <fieldset>
+          <legend>Your message</legend>
+          <div class="frm">
+               <table>
+                    <tr>
+                         <td class="lbl"><label for="receiver">To</label></td>
+                         <td><input type="text" class="fld" id="lbl"></td>
+                    </tr>
+                    <tr>
+                         <td class="lbl"><label for="email">Your email</label></td>
+                         <td><input type="text" class="fld" id="email"></td>
+                    </tr>
+                    <tr>
+                         <td class="lbl"><label for="message">Message</label></td>
+                         <td><textarea name="message" id="message" cols="20" rows="10"></textarea></td>
+                    </tr>
+                    <tr>
+                         <td class="lbl"><label for="afile">Attach File</label></td>
+                         <td><input type="file" class="fld" id="afile"></td>
+                    </tr>
+               </table>
+          </div>
+     </fieldset>
+     <fieldset>
+          <legend>How you found us</legend>
+          <div class="frm">
+               <table>
+                    <tr>
+                         <td><label for="social">How did you hear of us</label></td>
+                         <td><select name="social" id="social">
+                              <option value="Google">Google</option>
+                         </select></td>
+                    </tr>
+                    <tr>
+                         <td><label for="newsletter">Newsletter</label></td>
+                         <td><input type="checkbox" name="newsletter" id="newsletter">Ensure this box is checked if you would like to receive email updates</td>
+                    </tr>
+               </table>
+          </div>
+     </fieldset>
+     <input type="submit" value="Send message"></input>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<style>
+     * {
+          box-sizing: border-box;
+     }
+
+     body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-color: #99cdff;
+          /* border: 2px solid black; */
+     }
+
+     .lbl {
+          text-align: left;
+          width: 100px;
+          white-space: nowrap;
+          /* border: 1px solid black; */
+     }
+
+     .fld {
+          width: 100%;
+     }
+
+     .frm {
+          display: block;
+     }
+
+     .center {
+          display: block;
+          margin: 0 auto 0 auto;
+          width: 30%;
+     }
+
+     input[name="add1"],
+     input[name="add2"] {
+          width: 250px;
+     }
+
+     label::after {
+          content: ": ";
+     }
+
+     textarea {
+          resize: none;
+     }
+
+     .submitButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+
+     .submitButton>* {
+          margin: 10px;
+     }
+</style>
+
+<body>
+     <img class="center" src="DEMOWEB\DEMOWEB\IMAGES\hinhlogo.JPG" alt="">
+     <center>
+          <h1>Registration Form</h1>
+          <p>Register your Jackson Electronics product here</p>
+     </center>
+     <div class="frm">
+          <table>
+               <tr>
+                    <td class="lbl"><label for="fname">First name</label></td>
+                    <td class="fld"><input type="text" id="fname" name="fname"></td>
+                    <td class="lbl"><label for="lname">Last name</label></td>
+                    <td class="fld"><input type="text" id="lname" name="lname"></td>
+               </tr>
+               <tr>
+                    <td class="lbl"><label for="add1">Address #1</label></td>
+                    <td class="fld"><input type="text" id="add1" name="add1"></td>
+               </tr>
+               <tr>
+                    <td class="lbl"><label for="add2">Address #2</label></td>
+                    <td class="fld"><input type="text" id="add2" name="add2"></td>
+               </tr>
+               <tr>
+                    <td class="lbl"><label for="city">City</label></td>
+                    <td class="fld"><input type="text" id="city" name="city"></td>
+                    <td class="lbl"><label for="state">State</label></td>
+                    <td class="fld">
+                         <input style="width: 50px; margin: 0 0 0 -30px;" type="text" id="state" name="state">
+                    </td>
+                    <td class="lbl"><label for="zip">Zip</label></td>
+                    <td class="fld"><input style="width: 100px;" type="text" id="zip" name="zip"></td>
+               </tr>
+               <tr>
+                    <td class="lbl"><label for="country">Country</label></td>
+                    <td class="fld"><input type="text" id="country" name="country" value="United States"></td>
+               </tr>
+          </table>
+          <hr>
+          <table>
+               <tr>
+                    <td class="lbl"><label for="product">Product</label></td>
+                    <td class="fld"><select name="product" id="product">
+                              <option value="ScanMaster">ScanMaster</option>
+                         </select></td>
+               </tr>
+               <tr>
+                    <td class="lbl"><label for="date">Date Purchased</label></td>
+                    <td class="fld"><input type="text" id="date" name="date"></td>
+               </tr>
+               <tr>
+                    <td class="lbl"><label for="serial">Serial #</label></td>
+                    <td class="fld"><input type="text" id="serial" name="serial"></td>
+               </tr>
+               <tr>
+                    <td class="lbl"><label for="use">Used for</label></td>
+                    <td class="fld">
+                         <input type="radio" name="use">Home&emsp;
+                         <input type="radio" name="use">Educational Institution<br />
+                         <input type="radio" name="use">Business
+                         <input type="radio" name="use">Other<br />
+                         <input type="radio" name="use">Government</label>
+                    </td>
+               </tr>
+               <tr>
+                    <td class="lbl"><label for="system">System (check all that reply)</label></td>
+                    <td class="fld">
+                         <input type="checkbox" name="system">Windows&emsp;&emsp13;
+                         <input type="checkbox" name="system">UNIX<br />
+                         <input type="checkbox" name="system">Macintosh&emsp;
+                         <input type="checkbox" name="system">Other
+                    </td>
+               </tr>
+          </table>
+          <hr>
+          <table>
+               <tr>
+                    <td class="lbl"><label for="comment">Comments?</label></td>
+                    <td class="fld"><textarea name="comment" id="comment" cols="60" rows="10"></textarea></td>
+               </tr>
+          </table>
+          <div class="submitButton">
+               <button>Click to register</button>
+               <button>Click to cancel</button>
+          </div>
+     </div>
+</body>
+
+</html>
